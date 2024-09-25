@@ -1,5 +1,16 @@
 <!--<p>{{ facture().Reference }}</p>
 <p>{{facture().Client ? 'Client ' + facture().Client?.Designation : 'aucun client référencé'}}</p>-->
+<div>
+    <H2>Statut: {{facture().Statut}}</H2>
+</div>
+@if (facture().Statut==='payé')
+{
+<button class="btn" disabled>Modifier</button>
+}@else {
+<button class="btn">Modifier</button>
+}
+
+<!--CI DESSOUS LA PARTIE FACTURE A GENERRER EN PDF -->
 <div class="bg-white text-gray-800 rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
     <div class="flex justify-between items-center border-b pb-6">
         <div>
