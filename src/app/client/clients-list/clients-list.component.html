@@ -1,0 +1,6 @@
+<h2>clients-list works!</h2>
+@for (client of listeClient(); track client.IdClient) 
+{
+    <h3>{{client.Designation}}</h3>
+    <button [routerLink]="['/client', client.IdClient]">Voir</button>
+}
