@@ -1,4 +1,5 @@
 import { Client } from './client-model';
+import { Prestation, Prestation_List } from './prestation-model';
 export enum Statut {
   attente = 'en attente',
   envoye = 'envoyé',
@@ -12,6 +13,7 @@ export interface FactureModele {
   DateCreation: string;
   Statut: Statut;
   Client: Client | null;
+  Prestation : Prestation_List[];
 }
 
 export class Facture implements FactureModele {
@@ -22,6 +24,7 @@ export class Facture implements FactureModele {
   DateCreation: string;
   Statut: Statut;
   Client: Client | null;
+  Prestation: Prestation_List[];
   MontantHt: number;
   TauxTva: number;
   MontantTTC: number;
@@ -33,8 +36,9 @@ export class Facture implements FactureModele {
     DateCreation: string,
     Statut: Statut,
     Client: Client | null,
+    Prestation : Prestation_List[],
     MontantHt: number,
-    TauxTva: number,
+    TauxTva: number
   ) {
     this.IdFacture = IdFacture;
     this.Reference = Reference;
@@ -43,6 +47,7 @@ export class Facture implements FactureModele {
     this.DateCreation = DateCreation;
     this.Statut = Statut;
     this.Client = Client;
+    this.Prestation = Prestation;
     this.MontantHt = MontantHt;
     this.TauxTva = TauxTva;
     this.MontantTTC = this.calculerMontantTTC(this.MontantHt, this.TauxTva);
