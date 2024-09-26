@@ -8,6 +8,7 @@ export interface FactureModele {
   IdFacture: string | null;
   Reference: string;
   IdExerciceMensuel: string;
+  IdExerciceAnnuel: string;
   DateCreation: string;
   Statut: Statut;
   Client: Client | null;
@@ -17,6 +18,7 @@ export class Facture implements FactureModele {
   IdFacture: string | null;
   Reference: string;
   IdExerciceMensuel: string;
+  IdExerciceAnnuel: string;
   DateCreation: string;
   Statut: Statut;
   Client: Client | null;
@@ -27,15 +29,17 @@ export class Facture implements FactureModele {
     IdFacture: string | null,
     Reference: string,
     IdExerciceMensuel: string,
+    IdExerciceAnnuel: string,
     DateCreation: string,
     Statut: Statut,
     Client: Client | null,
     MontantHt: number,
-    TauxTva: number
+    TauxTva: number,
   ) {
     this.IdFacture = IdFacture;
     this.Reference = Reference;
     this.IdExerciceMensuel = IdExerciceMensuel;
+    this.IdExerciceAnnuel = IdExerciceAnnuel;
     this.DateCreation = DateCreation;
     this.Statut = Statut;
     this.Client = Client;

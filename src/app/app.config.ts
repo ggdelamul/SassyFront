@@ -6,6 +6,7 @@ import { FactureDetailComponent } from './facture/facture-detail/facture-detail.
 import { HomePageComponent } from './home-page/home-page.component';
 import { ClientDetailComponent } from './client/client-detail/client-detail.component';
 import { PageNotFoundComponent } from './Page-Not-Found/page-not-found/page-not-found.component';
+import { FactureEditComponent } from './facture/facture-edit/facture-edit.component';
 
 const routes: Routes = [
   {
@@ -18,30 +19,35 @@ const routes: Routes = [
     component: FactureListComponent,
     title: 'toutes les factures',
   },
-  { 
-    path: 'clients', 
-    component: ClientsListComponent, 
-    title: 'clients' 
+  {
+    path: 'clients',
+    component: ClientsListComponent,
+    title: 'clients',
   },
-  { 
-    path: 'facture/:id', 
-    component: FactureDetailComponent, 
-    title: 'facture' 
+  {
+    path: 'facture/:id',
+    component: FactureDetailComponent,
+    title: 'facture',
   },
-  { 
-    path: 'client/:id', 
-    component: ClientDetailComponent, 
-    title: 'client' 
+  {
+    path: 'client/:id',
+    component: ClientDetailComponent,
+    title: 'client',
   },
-  { 
-    path: '', 
-    redirectTo: '/HomePage', 
-    pathMatch: 'full' 
+  {
+    path: 'editerFacture/:id',
+    component: FactureEditComponent,
+    title: 'Editer une facture',
   },
-  { 
-    path: '**', 
-    component: PageNotFoundComponent , 
-    title: 'Page introuvable'
+  {
+    path: '',
+    redirectTo: '/HomePage',
+    pathMatch: 'full',
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+    title: 'Page introuvable',
   },
 ];
 

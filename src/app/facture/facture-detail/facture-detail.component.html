@@ -7,7 +7,7 @@
 {
 <button class="btn" disabled>Modifier</button>
 }@else {
-<button class="btn">Modifier</button>
+<button class="btn" [routerLink]="['/editerFacture', facture().IdFacture]">Modifier</button>
 }
 
 <!--CI DESSOUS LA PARTIE FACTURE A GENERRER EN PDF -->
@@ -26,13 +26,12 @@
         </div>
     </div>
 
-    <!-- Informations sur le client A DEVELLOPER PROFILE UTILISATEUR-->
+    <!-- Informations sur le client A DEVELLOPER partie Client-->
     <div class="mt-6">
         <h3 class="text-lg font-semibold text-blue-600">Facturé à:</h3>
-        <p>Entreprise ABC</p>
-        <p>456 Avenue du Client</p>
-        <p>75002 Paris, France</p>
-        <p>Email: client.com</p>
+        <p>{{facture().Client?.Designation}}</p>
+        <p>{{facture().Client?.Adresse}}</p>
+        <p>{{facture().Client?.Email}}</p>
     </div>
 
     <!-- Tableau des détails de la facture -->
