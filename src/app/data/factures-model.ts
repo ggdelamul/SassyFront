@@ -13,7 +13,7 @@ export interface FactureModele {
   DateCreation: string;
   Statut: Statut;
   Client: Client | null;
-  Prestation : Prestation_List[];
+  Prestation: Prestation_List[] | null;
 }
 
 export class Facture implements FactureModele {
@@ -24,7 +24,7 @@ export class Facture implements FactureModele {
   DateCreation: string;
   Statut: Statut;
   Client: Client | null;
-  Prestation: Prestation_List[];
+  Prestation: Prestation_List[] | null;
   MontantHt: number;
   TauxTva: number;
   MontantTTC: number;
@@ -36,7 +36,7 @@ export class Facture implements FactureModele {
     DateCreation: string,
     Statut: Statut,
     Client: Client | null,
-    Prestation : Prestation_List[],
+    Prestation: Prestation_List[] | null,
     MontantHt: number,
     TauxTva: number
   ) {

@@ -5,16 +5,21 @@
             <span [routerLink]="['/HomePage']" class="text-slate-50">{{title}}</span>
         </div>
         <div class="space-x-4 flex items-center">
-            <div class="relative group">
-                <a href="#" class="hover:text-gray-300 text-slate-50">Exercices</a>
-                <!-- Sous-menu A REVOIR -->
-                <!--<div class="absolute hidden group-hover:block bg-blue-600 mt-1 w-40 rounded-md shadow-lg">
-                    <a href="#" class="block px-4 py-2 hover:bg-blue-500">Exercice Annuel</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-blue-500">Exercice Mensuel</a>
-                </div>-->
-            </div>
-            <a [routerLink]="['/factures']" class="hover:text-gray-300 text-slate-50">Factures</a>
-            <a [routerLink]="['/clients']" class="hover:text-gray-300 text-slate-50">Clients</a>
+            <li class="hover:bg-blue-100 relative group">
+                <a href="#" class="block px-4 py-2 text-gray-800">Exercices</a>
+                <div class="absolute left-full top-0 hidden group-hover:block bg-white shadow-lg mt-2 rounded-md w-48">
+                    <ul class="py-2">
+                        <li class="hover:bg-blue-100">
+                            <a href="#" class="block px-4 py-2 text-gray-800">Sous-option 1</a>
+                        </li>
+                        <li class="hover:bg-blue-100">
+                            <a href="#" class="block px-4 py-2 text-gray-800">Sous-option 2</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a [routerLink]="['/factures']" class="hover:text-gray-300 text-slate-50">Factures</a></li>
+            <li><a [routerLink]="['/clients']" class="hover:text-gray-300 text-slate-50">Clients</a></li>
         </div>
     </div>
 </nav>
