@@ -8,6 +8,8 @@ import { ClientDetailComponent } from './client/client-detail/client-detail.comp
 import { PageNotFoundComponent } from './Page-Not-Found/page-not-found/page-not-found.component';
 import { FactureEditComponent } from './facture/facture-edit/facture-edit.component';
 import { provideHttpClient } from '@angular/common/http';
+import { ExercicesAnnuelsListComponent } from './Exercices_Annuel/exercices-annuels-list/exercices-annuels-list.component';
+import { ExercicesAnnuelsDetailComponent } from './Exercices_Annuel/exercices-annuels-detail/exercices-annuels-detail.component';
 
 const routes: Routes = [
   {
@@ -39,6 +41,16 @@ const routes: Routes = [
     path: 'editerFacture/:id',
     component: FactureEditComponent,
     title: 'Editer une facture',
+  },
+  {
+    path: 'ExercicesAnnuels',
+    component: ExercicesAnnuelsListComponent,
+    title: 'Tout les exercices annuels',
+  },
+  {
+    path: 'ExerciceAnnuel/:id',
+    component: ExercicesAnnuelsDetailComponent,
+    title: 'Exercice annuel',
   },
   {
     path: '',

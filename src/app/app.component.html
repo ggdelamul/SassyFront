@@ -6,7 +6,7 @@
         </div>
         <div class="space-x-4 flex items-center">
             <li class="relative group">
-                <a href="#" class="block px-4 text-slate-50 hover:text-gray-300">Exercices Annuel</a>
+                <a href="#" class="block px-4 text-slate-50 hover:text-gray-300">Exercices Annuels</a>
                 <div class="absolute top-1/2 hidden group-hover:block bg-white shadow-lg mt-2 rounded-md w-48">
                     <ul class="py-2">
                         @if(Loader())
@@ -18,13 +18,14 @@
                         @for (item of TwoLastExercice(); track item.idExerciceAnnuel)
                         {
                         <li class="hover:bg-blue-100">
-                            <a class="block px-4 py-2 text-slate-950">{{item.designation}} {{item.idExerciceAnnuel}}</a>
+                            <a class="block px-4 py-2 text-slate-950">{{item.designation}}</a>
                         </li>
                         }
                         @if(!Loader())
                         {
                         <li class="hover:bg-blue-100">
-                            <a href="#" class="block px-4 py-2 text-slate-800">Voir tout les exercices</a>
+                            <a href="#" class="block px-4 py-2 text-slate-800" [routerLink]="['/ExercicesAnnuels']">Voir
+                                tout les exercices</a>
                         </li>
                         }
                     </ul>

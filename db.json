@@ -3,15 +3,15 @@
     {
       "idExerciceAnnuel": 1,
       "designation": "2022",
-      "exercices_mensuels": []
+      "exercicemensuels": []
     },
     {
       "idExerciceAnnuel": 2,
       "designation": "2023",
-      "exercices_mensuels": [
+      "exercicemensuels": [
         {
           "idExerciceMensuel": 1,
-          "designation": "Janvier",
+          "mois": "Janvier",
           "factures": [
             {
               "idFacture": 101,
@@ -59,7 +59,7 @@
         },
         {
           "idExerciceMensuel": 2,
-          "designation": "Février",
+          "mois": "Février",
           "factures": [
             {
               "idFacture": 103,
@@ -89,10 +89,10 @@
     {
       "idExerciceAnnuel": 3,
       "designation": "2024",
-      "exercices_mensuels": [
+      "exercicemensuels": [
         {
           "idExerciceMensuel": 3,
-          "designation": "Mars",
+          "mois": "Mars",
           "factures": [
             {
               "idFacture": 104,
@@ -119,5 +119,6 @@
         }
       ]
     }
-  ]
+  ],
+  "Clients": []
 }
