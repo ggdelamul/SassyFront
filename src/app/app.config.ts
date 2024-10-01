@@ -7,6 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ClientDetailComponent } from './client/client-detail/client-detail.component';
 import { PageNotFoundComponent } from './Page-Not-Found/page-not-found/page-not-found.component';
 import { FactureEditComponent } from './facture/facture-edit/facture-edit.component';
+import { provideHttpClient } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -55,5 +56,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
+    provideHttpClient(),
   ],
 };
