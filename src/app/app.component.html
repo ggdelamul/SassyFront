@@ -15,7 +15,7 @@
                             <a class="block px-4 py-2 text-slate-950">Chargement des Exercices</a>
                         </li>
                         }
-                        @for (item of TwoLastExercice(); track item.idExerciceAnnuel)
+                        @for (item of TwoLastExercice(); track item.id)
                         {
                         <li class="hover:bg-blue-100">
                             <a class="block px-4 py-2 text-slate-950">{{item.designation}}</a>
@@ -24,7 +24,7 @@
                         @if(!Loader())
                         {
                         <li class="hover:bg-blue-100">
-                            <a href="#" class="block px-4 py-2 text-slate-800" [routerLink]="['/ExercicesAnnuels']">Voir
+                            <a href="#" class="block px-4 py-2 text-slate-800" [routerLink]="['/exercicesannuels']">Voir
                                 tout les exercices</a>
                         </li>
                         }

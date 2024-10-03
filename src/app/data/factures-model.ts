@@ -6,7 +6,7 @@ export enum Statut {
   paye = 'payé',
 }
 export interface FactureModele {
-  IdFacture: string | null;
+  id: string | null;
   Reference: string;
   IdExerciceMensuel: string;
   IdExerciceAnnuel: string;
@@ -17,7 +17,7 @@ export interface FactureModele {
 }
 
 export class Facture implements FactureModele {
-  IdFacture: string | null;
+  id: string | null;
   Reference: string;
   IdExerciceMensuel: string;
   IdExerciceAnnuel: string;
@@ -40,7 +40,7 @@ export class Facture implements FactureModele {
     MontantHt: number,
     TauxTva: number
   ) {
-    this.IdFacture = IdFacture;
+    this.id = IdFacture;
     this.Reference = Reference;
     this.IdExerciceMensuel = IdExerciceMensuel;
     this.IdExerciceAnnuel = IdExerciceAnnuel;

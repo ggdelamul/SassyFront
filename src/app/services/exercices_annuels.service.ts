@@ -10,8 +10,12 @@ import {
 })
 export class Exercice_Annuel_Service {
   private readonly HttpClient = inject(HttpClient);
-  private readonly API_URL = 'http://localhost:3000/exercices_annuels';
+  private readonly API_URL = 'http://localhost:3000/exercicesannuels';
   getAllExerciceAnnuel(): Observable<Exercice_annuelList> {
     return this.HttpClient.get<Exercice_annuelList>(this.API_URL);
+  }
+  getExerciceAnnuelById(id:number):Observable<Exercice_annuel>
+  {
+    return this.HttpClient.get<Exercice_annuel>(`${this.API_URL}/${id}`);
   }
 }

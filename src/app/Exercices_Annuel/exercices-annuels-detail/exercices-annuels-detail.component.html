@@ -1,1 +1,24 @@
-<p>exercices-annuels-detail works!</p>
+@if(loading())
+{
+<h1>Chargement des données</h1>
+}
+
+@if(exercice_annuel(); as exercice_annuel)
+{
+<h1>Année: {{exercice_annuel.designation}}</h1>
+}
+
+@for (item of exercice_annuel()?.exercicemensuels; track item.id) {
+<hr>
+<div class="flex">
+    <div>
+        <p>id : {{item.id}}</p>
+        <p>Mois : {{item.mois}}</p>
+        <p>Total Chiffre d'affaire: A mep</p>
+    </div>
+    <div>
+        <button>Voir les factures</button>
+    </div>
+</div>
+
+}

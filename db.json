@@ -1,33 +1,33 @@
 {
-  "exercices_annuels": [
+  "exercicesannuels": [
     {
-      "idExerciceAnnuel": 1,
+      "id": 1,
       "designation": "2022",
       "exercicemensuels": []
     },
     {
-      "idExerciceAnnuel": 2,
+      "id": 2,
       "designation": "2023",
       "exercicemensuels": [
         {
-          "idExerciceMensuel": 1,
+          "id": 1,
           "mois": "Janvier",
           "factures": [
             {
-              "idFacture": 101,
+              "id": 101,
               "reference": "F2023-001",
               "montantHT": 10000,
               "tauxTVA": 20,
               "montantTTC": 12000,
               "client": {
-                "idClient": 201,
+                "id": 201,
                 "raisonSociale": "Client A",
                 "adresseMail": "clienta@example.com",
                 "telephone": "0123456789"
               },
               "prestations": [
                 {
-                  "idPrestation": 301,
+                  "id": 301,
                   "designation": "Consultation",
                   "quantite": 5,
                   "prixUnitaire": 2000
@@ -35,20 +35,20 @@
               ]
             },
             {
-              "idFacture": 102,
+              "id": 102,
               "reference": "F2023-002",
               "montantHT": 5000,
               "tauxTVA": 20,
               "montantTTC": 6000,
               "client": {
-                "idClient": 202,
+                "id": 202,
                 "raisonSociale": "Client B",
                 "adresseMail": "clientb@example.com",
                 "telephone": "0987654321"
               },
               "prestations": [
                 {
-                  "idPrestation": 302,
+                  "id": 302,
                   "designation": "Développement",
                   "quantite": 2,
                   "prixUnitaire": 2500
@@ -58,24 +58,24 @@
           ]
         },
         {
-          "idExerciceMensuel": 2,
+          "id": 2,
           "mois": "Février",
           "factures": [
             {
-              "idFacture": 103,
+              "id": 103,
               "reference": "F2023-003",
               "montantHT": 7000,
               "tauxTVA": 20,
               "montantTTC": 8400,
               "client": {
-                "idClient": 203,
+                "id": 203,
                 "raisonSociale": "Client C",
                 "adresseMail": "clientc@example.com",
                 "telephone": "0654321987"
               },
               "prestations": [
                 {
-                  "idPrestation": 303,
+                  "id": 303,
                   "designation": "Formation",
                   "quantite": 1,
                   "prixUnitaire": 7000
@@ -87,28 +87,28 @@
       ]
     },
     {
-      "idExerciceAnnuel": 3,
+      "id": 3,
       "designation": "2024",
       "exercicemensuels": [
         {
-          "idExerciceMensuel": 3,
+          "id": 3,
           "mois": "Mars",
           "factures": [
             {
-              "idFacture": 104,
+              "id": 104,
               "reference": "F2024-001",
               "montantHT": 12000,
               "tauxTVA": 20,
               "montantTTC": 14400,
               "client": {
-                "idClient": 204,
+                "id": 204,
                 "raisonSociale": "Client D",
                 "adresseMail": "clientd@example.com",
                 "telephone": "0147895632"
               },
               "prestations": [
                 {
-                  "idPrestation": 304,
+                  "id": 304,
                   "designation": "Maintenance",
                   "quantite": 3,
                   "prixUnitaire": 4000

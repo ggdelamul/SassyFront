@@ -11,7 +11,7 @@ export class FactureService {
 
   // la facture avec l'id donnée
   getFactureById(id: string | null): Facture {
-    const facture = FACTURES_LIST.find((facture) => facture.IdFacture === id);
+    const facture = FACTURES_LIST.find((facture) => facture.id === id);
     if (!facture) {
       throw new Error("Cette facture n'existe pas ");
     }

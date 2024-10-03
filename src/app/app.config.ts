@@ -43,12 +43,12 @@ const routes: Routes = [
     title: 'Editer une facture',
   },
   {
-    path: 'ExercicesAnnuels',
+    path: 'exercicesannuels',
     component: ExercicesAnnuelsListComponent,
     title: 'Tout les exercices annuels',
   },
   {
-    path: 'ExerciceAnnuel/:id',
+    path: 'exercicesannuels/:id',
     component: ExercicesAnnuelsDetailComponent,
     title: 'Exercice annuel',
   },

@@ -1,7 +1,8 @@
 import { Facture } from './factures-model';
 
 export interface Exercice_mensuel {
-  idExerciceMensuel: number;
+  id: number;
   mois: string;
   listeFacture: Facture[];
+  montantChiffreAffaire: number;
 }
