@@ -53,6 +53,11 @@ const routes: Routes = [
     title: 'Exercice annuel',
   },
   {
+    path: 'exercicesannuels/:id/:mois'
+    /*ici le compoosant du mois */
+    
+  }, 
+  {
     path: '',
     redirectTo: '/HomePage',
     pathMatch: 'full',

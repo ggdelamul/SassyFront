@@ -6,3 +6,4 @@ export interface Exercice_mensuel {
   listeFacture: Facture[];
   montantChiffreAffaire: number;
 }
+export type monthList = Exercice_mensuel[];
