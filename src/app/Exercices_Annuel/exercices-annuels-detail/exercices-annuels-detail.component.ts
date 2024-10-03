@@ -7,8 +7,8 @@ import { toSignal } from '@angular/core/rxjs-interop';
   standalone: true,
   imports: [],
   templateUrl: './exercices-annuels-detail.component.html',
-  styles: ``
+  styles: ``,
 })
 export class ExercicesAnnuelsDetailComponent {
-
+  readonly execrcice_annuel_service = inject(Exercice_Annuel_Service);
 }
