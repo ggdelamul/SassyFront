@@ -17,7 +17,6 @@ export class AppComponent {
   );
   readonly TwoLastExercice = computed(() => {
     const liste = this.ListeExerciceAnnuel(); // Appelle une fois
-    console.log(liste);
     return liste ? liste.slice(-2) : [];
   });
   readonly Loader = computed(() => !this.ListeExerciceAnnuel());

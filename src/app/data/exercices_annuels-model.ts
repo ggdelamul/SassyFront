@@ -1,9 +1,9 @@
-import { Exercice_mensuel } from './exercices_mensuels-model';
+import { Exercice_Mensuel } from './exercices_mensuels-model';
 
 export interface Exercice_annuel {
   id: number;
   designation: string;
-  exercicemensuels: Exercice_mensuel[];
+  exercicemensuels: Exercice_Mensuel[];
 }
 
 export type Exercice_annuelList = Exercice_annuel[];

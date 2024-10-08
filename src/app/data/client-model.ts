@@ -1,9 +1,9 @@
 export interface Client {
-  IdClient: string | null;
-  Designation: string;
-  DateCreation: string;
-  Email: string;
-  Telephone: string;
-  Adresse: string;
+  id: string | null;
+  raisonSociale: string;
+  dateCreation: string;
+  adresseMail: string;
+  telephone: string;
+  adresse: string;
 }
 export type ClientList = Client[];

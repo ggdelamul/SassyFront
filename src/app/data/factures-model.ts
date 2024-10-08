@@ -5,58 +5,50 @@ export enum Statut {
   envoye = 'envoyé',
   paye = 'payé',
 }
-export interface FactureModele {
+export interface IFacture {
   id: string | null;
-  Reference: string;
-  IdExerciceMensuel: string;
-  IdExerciceAnnuel: string;
-  DateCreation: string;
-  Statut: Statut;
-  Client: Client | null;
-  Prestation: Prestation_List[] | null;
+  reference: string;
+  dateCreation: string;
+  statutFacture: Statut;
+  client: Client | null;
+  prestation: Prestation_List[] | null;
 }
 
-export class Facture implements FactureModele {
+export class Facture implements IFacture {
   id: string | null;
-  Reference: string;
-  IdExerciceMensuel: string;
-  IdExerciceAnnuel: string;
-  DateCreation: string;
-  Statut: Statut;
-  Client: Client | null;
-  Prestation: Prestation_List[] | null;
-  MontantHt: number;
-  TauxTva: number;
-  MontantTTC: number;
+  reference: string;
+  dateCreation: string;
+  statutFacture: Statut;
+  client: Client | null;
+  prestation: Prestation_List[] | null;
+  montantHt: number;
+  tauxTva: number;
+  montantTTC: number;
   constructor(
     IdFacture: string | null,
-    Reference: string,
-    IdExerciceMensuel: string,
-    IdExerciceAnnuel: string,
-    DateCreation: string,
-    Statut: Statut,
+    reference: string,
+    dateCreation: string,
+    statutFacture: Statut,
     Client: Client | null,
-    Prestation: Prestation_List[] | null,
-    MontantHt: number,
-    TauxTva: number
+    prestation: Prestation_List[] | null,
+    montantHt: number,
+    tauxTva: number
   ) {
     this.id = IdFacture;
-    this.Reference = Reference;
-    this.IdExerciceMensuel = IdExerciceMensuel;
-    this.IdExerciceAnnuel = IdExerciceAnnuel;
-    this.DateCreation = DateCreation;
-    this.Statut = Statut;
-    this.Client = Client;
-    this.Prestation = Prestation;
-    this.MontantHt = MontantHt;
-    this.TauxTva = TauxTva;
-    this.MontantTTC = this.calculerMontantTTC(this.MontantHt, this.TauxTva);
+    this.reference = reference;
+    this.dateCreation = dateCreation;
+    this.statutFacture = statutFacture;
+    this.client = Client;
+    this.prestation = prestation;
+    this.montantHt = montantHt;
+    this.tauxTva = tauxTva;
+    this.montantTTC = this.calculerMontantTTC(this.montantHt, this.tauxTva);
   }
-  private calculerMontantTTC(MontantHt: number, TauxTva: number): number {
-    return MontantHt + (MontantHt * TauxTva) / 100;
+  private calculerMontantTTC(MontantHt: number, tauxTva: number): number {
+    return MontantHt + (MontantHt * tauxTva) / 100;
   }
   changerStatut(nouveauStatut: Statut): void {
-    this.Statut = nouveauStatut;
+    this.statutFacture = nouveauStatut;
   }
 }
 

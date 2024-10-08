@@ -4,6 +4,7 @@ import { Exercice_Annuel_Service } from '../../services/exercices_annuels.servic
 import { toSignal } from '@angular/core/rxjs-interop';
 import { catchError, map, of } from 'rxjs';
 import { Exercice_annuel } from '../../data/exercices_annuels-model';
+import { Exercice_Mensuel } from '../../data/exercices_mensuels-model';
 @Component({
   selector: 'app-exercices-annuels-detail',
   standalone: true,
@@ -31,7 +32,20 @@ export class ExercicesAnnuelsDetailComponent {
   // Cas d'erreur HTTP
   readonly error = computed(() => this.exercice_annuelResponse()?.error);
   // Cas de succès HTTP
-  readonly exercice_annuel = computed(
-    () => this.exercice_annuelResponse()?.value
-  );
+  readonly exercice_annuel = computed(() => {
+    const data = this.exercice_annuelResponse()?.value;
+    if (data) {
+      // Transforme les exercices mensuels en instances de Exercice_Mensuel
+      data.exercicemensuels = data.exercicemensuels.map((month) => {
+        return new Exercice_Mensuel(
+          month.id,
+          month.mois,
+          month.listeFacture || []
+        );
+      });
+      console.log(data.exercicemensuels);
+      return data;
+    }
+    return undefined;
+  });
 }
