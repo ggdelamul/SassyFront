@@ -1,9 +1,9 @@
 <h2>Listes de toutes les factures</h2>
-@for (facture of facturesList(); track facture.IdFacture) 
+@for (facture of facturesList(); track facture.id) 
 {
     <h2>{{facture.Reference}}</h2>
     <p>{{facture.MontantTTC}}</p>
     <p>{{facture.Statut}}</p>
-    <button [routerLink]="['/facture', facture.IdFacture]">VOIR</button>
+    <button [routerLink]="['/facture', facture.id]">VOIR</button>
     <hr>
 }

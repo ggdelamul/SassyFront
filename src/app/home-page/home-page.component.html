@@ -6,7 +6,7 @@
             <p>Date: {{lastFacture().DateCreation}}</p>
             <p>Montant: {{lastFacture().MontantTTC}} euros</p>
             <p>Client: Entreprise X</p>
-            <button [routerLink]="['/facture', lastFacture().IdFacture]" class="btn">Voir</button>
+            <button [routerLink]="['/facture', lastFacture().id]" class="btn">Voir</button>
         </div>
         <div class="bg-blue-600 p-6 rounded-lg shadow-lg">
             <h2 class="text-xl font-semibold mb-2">Dernier Client Saisi</h2>
