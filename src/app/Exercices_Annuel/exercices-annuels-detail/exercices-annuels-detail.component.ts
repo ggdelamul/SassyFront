@@ -1,10 +1,11 @@
-import { Component, signal, inject, computed } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { RouterLink, ActivatedRoute } from '@angular/router';
-import { Exercice_Annuel_Service } from '../../services/exercices_annuels.service';
+import { Exercice_Annuel_Service } from '../../services/http/exercices_annuels.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { catchError, map, of } from 'rxjs';
-import { Exercice_annuel } from '../../data/exercices_annuels-model';
 import { Exercice_Mensuel } from '../../data/exercices_mensuels-model';
+import { CalculService } from '../../services/metier/calculService';
+
 @Component({
   selector: 'app-exercices-annuels-detail',
   standalone: true,
@@ -14,6 +15,7 @@ import { Exercice_Mensuel } from '../../data/exercices_mensuels-model';
 })
 export class ExercicesAnnuelsDetailComponent {
   readonly exercice_annuel_service = inject(Exercice_Annuel_Service);
+  readonly calculService = inject(CalculService);
   readonly route = inject(ActivatedRoute);
   readonly idExercice = Number(this.route.snapshot.paramMap.get('id'));
   /*readonly exercice_annuel = toSignal(
@@ -36,11 +38,12 @@ export class ExercicesAnnuelsDetailComponent {
     const data = this.exercice_annuelResponse()?.value;
     if (data) {
       // Transforme les exercices mensuels en instances de Exercice_Mensuel
-      data.exercicemensuels = data.exercicemensuels.map((month) => {
+      data.exercicemensuels = data.exercicemensuels.map((month:Exercice_Mensuel) => {
         return new Exercice_Mensuel(
           month.id,
           month.mois,
-          month.listeFacture || []
+          month.listeFacture || [],
+          this.calculService
         );
       });
       console.log(data.exercicemensuels);

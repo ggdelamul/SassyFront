@@ -1,5 +1,6 @@
+import { CalculService } from '../services/metier/calculService';
 import { Client } from './client-model';
-import { Prestation, Prestation_List } from './prestation-model';
+import { Prestation_List } from './prestation-model';
 export enum Statut {
   attente = 'en attente',
   envoye = 'envoyé',
@@ -13,7 +14,9 @@ export interface IFacture {
   client: Client | null;
   prestation: Prestation_List[] | null;
 }
-
+/***
+ * @todo mettre en place la verifciation du taux de tva compris entre 0 et 100
+ */
 export class Facture implements IFacture {
   id: string | null;
   reference: string;
@@ -24,6 +27,7 @@ export class Facture implements IFacture {
   montantHt: number;
   tauxTva: number;
   montantTTC: number;
+  calculService: CalculService;
   constructor(
     IdFacture: string | null,
     reference: string,
@@ -32,7 +36,8 @@ export class Facture implements IFacture {
     Client: Client | null,
     prestation: Prestation_List[] | null,
     montantHt: number,
-    tauxTva: number
+    tauxTva: number,
+    calculService: CalculService
   ) {
     this.id = IdFacture;
     this.reference = reference;
@@ -42,11 +47,13 @@ export class Facture implements IFacture {
     this.prestation = prestation;
     this.montantHt = montantHt;
     this.tauxTva = tauxTva;
-    this.montantTTC = this.calculerMontantTTC(this.montantHt, this.tauxTva);
+    this.calculService = calculService;
+    this.montantTTC = this.calculService.calculerMontantTTC(
+      this.montantHt,
+      this.tauxTva
+    );
   }
-  private calculerMontantTTC(MontantHt: number, tauxTva: number): number {
-    return MontantHt + (MontantHt * tauxTva) / 100;
-  }
+
   changerStatut(nouveauStatut: Statut): void {
     this.statutFacture = nouveauStatut;
   }

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import {
   Exercice_annuel,
   Exercice_annuelList,
-} from '../data/exercices_annuels-model';
+} from '../../data/exercices_annuels-model';
 @Injectable({
   providedIn: 'root',
 })

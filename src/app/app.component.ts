@@ -1,6 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
-import { Exercice_Annuel_Service } from './services/exercices_annuels.service';
+import { Exercice_Annuel_Service } from './services/http/exercices_annuels.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 @Component({
   selector: 'app-root',

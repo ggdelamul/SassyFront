@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Exercice_Annuel_Service } from '../../services/exercices_annuels.service';
+import { Exercice_Annuel_Service } from '../../services/http/exercices_annuels.service';
 import { RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 @Component({

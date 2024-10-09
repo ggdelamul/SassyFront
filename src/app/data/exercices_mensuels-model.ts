@@ -1,4 +1,5 @@
 import { Facture, FacturesList } from './factures-model';
+import { CalculService } from '../services/metier/calculService';
 
 interface IExercice_mensuel {
   id: number;
@@ -7,26 +8,24 @@ interface IExercice_mensuel {
 }
 
 export class Exercice_Mensuel implements IExercice_mensuel {
+  readonly calculService: CalculService;
   id: number;
   mois: string;
   listeFacture: FacturesList;
   montantChiffreAffaire: number;
 
-  constructor(id: number, mois: string, listeFacture: FacturesList) {
+  constructor(
+    id: number,
+    mois: string,
+    listeFacture: FacturesList,
+    calculService: CalculService
+  ) {
     this.id = id;
     this.mois = mois;
     this.listeFacture = listeFacture || [];
-    this.montantChiffreAffaire = this.calculerChiffreAffaireMensuel();
-  }
-
-  //voir à déplacer le calcul vers une autre classe
-  private calculerChiffreAffaireMensuel(): number {
-    return this.listeFacture.reduce((total, facture) => {
-      console.log(
-        `Facture ID: ${facture.id}, Montant TTC: ${facture.montantTTC}`
-      );
-      return total + (facture.montantTTC || 0);
-    }, 0);
+    this.calculService = calculService;
+    this.montantChiffreAffaire =
+      this.calculService.calculerChiffreAffaireMensuel(this.listeFacture);
   }
 }
 export type Exercice_mensuelList = Exercice_Mensuel[];
