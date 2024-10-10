@@ -24,6 +24,7 @@
               "client": {
                 "id": 201,
                 "raisonSociale": "Client A",
+                "datecreation": "17 juillet 2022",
                 "adresseMail": "clienta@example.com",
                 "telephone": "0123456789",
                 "adresse": "59 chemin de la victoire 69009 Lyon"
@@ -48,6 +49,7 @@
               "client": {
                 "id": 202,
                 "raisonSociale": "Client B",
+                "datecreation": "18 mai 2022",
                 "adresseMail": "clientb@example.com",
                 "telephone": "0987654321",
                 "adresse": "25 chemin de la soif 69009 Lyon"
@@ -76,11 +78,13 @@
               "tauxTVA": 20,
               "montantTTC": 8400,
               "client": {
-                "id": 203,
+                "id": 3,
                 "raisonSociale": "Client C",
                 "adresseMail": "clientc@example.com",
+                "datecreation": "17 juin 2022",
                 "telephone": "0654321987",
-                "adresse": "25 chemin de la soif 69009 Lyon"
+                "adresse": "25 rue du comptoir 69009 Lyon",
+                "statut": "actif"
               },
               "prestations": [
                 {
@@ -112,11 +116,13 @@
               "tauxTVA": 20,
               "montantTTC": 14400,
               "client": {
-                "id": 204,
+                "id": 4,
                 "raisonSociale": "Client D",
                 "adresseMail": "clientd@example.com",
+                "datecreation": "01 novembre 2023",
                 "telephone": "0147895632",
-                "adresse": "75 avenue de perlinpinpin 69009 Lyon"
+                "adresse": "75 avenue de perlinpinpin 69009 Lyon",
+                "statut": "actif"
               },
               "prestations": [
                 {
@@ -132,5 +138,51 @@
       ]
     }
   ],
-  "Clients": []
+  "Clients": [
+    {
+      "id": 1,
+      "raisonSociale": "Client A",
+      "adresseMail": "clienta@example.com",
+      "datecreation": "17 juillet 2022",
+      "telephone": "0123456789",
+      "adresse": "59 chemin de la victoire 69009 Lyon",
+      "statut": "actif"
+    },
+    {
+      "id": 2,
+      "raisonSociale": "Client B",
+      "datecreation": "18 mai 2022",
+      "adresseMail": "clientb@example.com",
+      "telephone": "0987654321",
+      "adresse": "25 chemin de la soif 69009 Lyon",
+      "statut": "actif"
+    },
+    {
+      "id": 3,
+      "raisonSociale": "Client C",
+      "adresseMail": "clientc@example.com",
+      "datecreation": "17 juin 2022",
+      "telephone": "0654321987",
+      "adresse": "25 rue du comptoir 69009 Lyon",
+      "statut": "actif"
+    },
+    {
+      "id": 4,
+      "raisonSociale": "Client D",
+      "adresseMail": "clientd@example.com",
+      "datecreation": "01 novembre 2023",
+      "telephone": "0147895632",
+      "adresse": "75 avenue de perlinpinpin 69009 Lyon",
+      "statut": "actif"
+    },
+    {
+      "id": 5,
+      "raisonSociale": "Client E",
+      "adresseMail": "clientc@example.com",
+      "datecreation": "10 octobre 2024",
+      "telephone": "0654321987",
+      "adresse": "175 avenue du petit canon 69009 Lyon",
+      "statut": "prospect"
+    }
+  ]
 }

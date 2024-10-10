@@ -18,7 +18,8 @@
                         @for (item of TwoLastExercice(); track item.id)
                         {
                         <li class="hover:bg-blue-100">
-                            <a class="block px-4 py-2 text-slate-950" [routerLink]="['/exercicesannuels', item.id]">{{item.designation}}</a>
+                            <a class="block px-4 py-2 text-slate-950"
+                                [routerLink]="['/exercicesannuels', item.id]">{{item.designation}}</a>
                         </li>
                         }
                         @if(!Loader())
@@ -31,8 +32,8 @@
                     </ul>
                 </div>
             </li>
-            <li><a  class="hover:text-gray-300 text-slate-50 px-4">Factures</a></li>
-            <li><a  class="hover:text-gray-300 text-slate-50 px-4">Clients</a></li>
+            <li><a class="hover:text-gray-300 text-slate-50 px-4">Factures</a></li>
+            <li><a class="hover:text-gray-300 text-slate-50 px-4" [routerLink]="['/clients']">Clients</a></li>
         </div>
     </div>
 </nav>

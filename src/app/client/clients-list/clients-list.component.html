@@ -1,2 +1,35 @@
-<h2>clients-list works!</h2>
-
+<section>
+    <div class="flex justify-center">
+        <h2 class="py-2 text-xl">Tableau de bord client</h2>
+    </div>
+    <div class="flex justify-center  items-center p-4">
+        @if(loading())
+        {
+        <p>Chargement des données</p>
+        }
+        <table class="min-w-full border border-gray-300">
+            <thead>
+                <tr class="bg-blue-200 text-left">
+                    <th class="py-2 px-4 border-b">Id <i class="fa fa-sort-desc cursor-pointer" style="font-size:24px"></i></th>
+                    <th class="py-2 px-4 border-b">Raison Sociale</th>
+                    <th class="py-2 px-4 border-b">Date de création</th>
+                    <th class="py-2 px-4 border-b">Statut</th>
+                    <th class="py-2 px-4 border-b">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (client of clientList(); track client.id) {
+                <tr class="hover:bg-gray-100 hover:text-black table-row-hover">
+                    <td class="py-2 px-4 border-b">{{client.id}}</td>
+                    <td class="py-2 px-4 border-b">{{client.raisonSociale}}</td>
+                    <td class="py-2 px-4 border-b">{{client.datecreation}}</td>
+                    <td class="py-2 px-4 border-b">{{client.statut}}</td>
+                    <td class="py-2 px-4 border-b">
+                        <button class="btn " [routerLink]="['/client', client.id]">VOIR</button>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
