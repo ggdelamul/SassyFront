@@ -1,14 +1,11 @@
 <h2 class="text-2xl font-bold mb-4 text-center my-2">Liste de tout les exercices</h2>
-<div class="flex flex-wrap justify-around items-center h-screen">
+<div class="flex flex-wrap justify-around items-center h-1/2">
     @for (annee of ListeExerciceAnnuel(); track annee.id)
     {
-    <div class="border-2 border-slate-50 m-4 p-4 flex flex-col items-center justify-center h-48 w-64 rounded-2xl">
+    <div class="border-2 border-slate-50 m-4 p-4 flex flex-col items-center justify-center h-48 w-72 rounded-2xl">
         <h2 class="text-lg font-semibold my-2">{{annee.designation}}</h2>
-        <!--@for (exercice of annee.exercicemensuels; track exercice.idExerciceMensuel)
-        {
-        <p>{{exercice.mois}}</p>
-        }-->
         <p class="my-2">Nombres de mois facturés : {{annee.exercicemensuels.length}}</p>
+        <p class="my-2">Chiffre d'affaires annuel : {{ annee.montantchiffreaffaireannuel }}</p>
         <button class="btn my-2" [routerLink]="['/exercicesannuels', annee.id]">Voir</button>
     </div>
     }

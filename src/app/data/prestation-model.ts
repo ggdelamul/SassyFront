@@ -1,12 +1,12 @@
 export enum TypePrestation {
-    unique='unique',
-    longue= 'longue durée'
+  unique = 'unique',
+  longue = 'longue durée',
 }
 
 export interface Prestation {
-  Idprestation: string;
-  NomPrestation: string;
-  TypePrestation: TypePrestation;
+  id: string;
+  nomprestation: string;
+  typeprestation: TypePrestation;
 }
 
 export type Prestation_List = Prestation[];

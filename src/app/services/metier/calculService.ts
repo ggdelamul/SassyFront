@@ -31,11 +31,15 @@ export class CalculService {
    * @param {Exercice_mensuelList} listeExerciceMensuel
    * @returns {number} Le montant total du chiffre d'affaires pour l'année.
    */
-  calculerChiffreAffaireAnnuel(
-    listeExerciceMensuel: Exercice_mensuelList
-  ): number {
-    return listeExerciceMensuel.reduce((total, exercice) => {
-      return total + (exercice.montantChiffreAffaire || 0);
+  calculerChiffreAffaireAnnuel(exercicemensuels: Exercice_mensuelList): number {
+    if (!exercicemensuels || exercicemensuels.length === 0) {
+      console.log('Aucun exercice mensuel pour le calcul annuel.');
+      return 0; // Retourne 0 si aucun exercice mensuel
+    }
+
+    return exercicemensuels.reduce((total, mensuel) => {
+      console.log('Exercice mensuel reçu pour le calcul annuel:', mensuel);
+      return total + mensuel.montantchiffreaffaire; // Accumule le montant
     }, 0);
   }
 }

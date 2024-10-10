@@ -12,7 +12,7 @@ export class Exercice_Mensuel implements IExercice_mensuel {
   id: number;
   mois: string;
   listeFacture: FacturesList;
-  montantChiffreAffaire: number;
+  montantchiffreaffaire: number;
 
   constructor(
     id: number,
@@ -24,7 +24,7 @@ export class Exercice_Mensuel implements IExercice_mensuel {
     this.mois = mois;
     this.listeFacture = listeFacture || [];
     this.calculService = calculService;
-    this.montantChiffreAffaire =
+    this.montantchiffreaffaire =
       this.calculService.calculerChiffreAffaireMensuel(this.listeFacture);
   }
 }

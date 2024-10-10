@@ -27,28 +27,28 @@ export class Facture implements IFacture {
   montantHt: number;
   tauxTva: number;
   montantTTC: number;
-  calculService: CalculService;
+  calculservice: CalculService;
   constructor(
-    IdFacture: string | null,
+    id: string | null,
     reference: string,
     dateCreation: string,
     statutFacture: Statut,
-    Client: Client | null,
+    client: Client | null,
     prestation: Prestation_List[] | null,
     montantHt: number,
     tauxTva: number,
-    calculService: CalculService
+    calculservice: CalculService
   ) {
-    this.id = IdFacture;
+    this.id = id;
     this.reference = reference;
     this.dateCreation = dateCreation;
     this.statutFacture = statutFacture;
-    this.client = Client;
+    this.client = client;
     this.prestation = prestation;
     this.montantHt = montantHt;
     this.tauxTva = tauxTva;
-    this.calculService = calculService;
-    this.montantTTC = this.calculService.calculerMontantTTC(
+    this.calculservice = calculservice;
+    this.montantTTC = this.calculservice.calculerMontantTTC(
       this.montantHt,
       this.tauxTva
     );

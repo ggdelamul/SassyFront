@@ -17,7 +17,7 @@ export class AppComponent {
   );
   readonly TwoLastExercice = computed(() => {
     const liste = this.ListeExerciceAnnuel(); // Appelle une fois
-    return liste ? liste.slice(-2) : [];
+    return liste ? liste.slice(-1) : [];//chercher a rendre dynamique la route quand je clique sur le menu .
   });
   readonly Loader = computed(() => !this.ListeExerciceAnnuel());
 }
