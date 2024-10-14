@@ -4,7 +4,7 @@ export enum StatutClient {
 }
 
 export interface Client {
-  id: string | null;
+  id: number;
   raisonSociale: string;
   datecreation: string;
   adressemail: string;
