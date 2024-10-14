@@ -5,11 +5,11 @@ export enum StatutClient {
 
 export interface Client {
   id: number;
-  raisonSociale: string;
+  raisonsociale: string;
   datecreation: string;
   adressemail: string;
   telephone: string;
   adresse: string;
-  statut: StatutClient
+  statut: StatutClient;
 }
 export type ClientList = Client[];

@@ -1,5 +1,5 @@
-<p>{{client()?.raisonSociale}}</p>
+<p>{{client()?.raisonsociale}}</p>
 <p>{{client()?.statut}}</p>
-<button class="btn">Editer</button>
+<button class="btn" [routerLink]="['/editerClient', client()?.id]">Editer</button>
 <button class="btn">Supprimer</button>
 <button class="btn">Retour</button>

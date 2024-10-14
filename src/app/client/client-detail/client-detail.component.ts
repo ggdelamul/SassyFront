@@ -6,7 +6,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 @Component({
   selector: 'app-client-detail',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './client-detail.component.html',
   styles: ``,
 })

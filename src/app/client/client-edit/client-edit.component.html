@@ -1,0 +1,8 @@
+@if (loading()) {
+<p>Chargement des données ...</p>
+}@else {
+    <p>{{client()?.id}}</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Nom du client" formControlName="raisonsociale"/>
+</form>
+}

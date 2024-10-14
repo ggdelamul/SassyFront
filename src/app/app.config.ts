@@ -7,6 +7,7 @@ import { ExercicesAnnuelsListComponent } from './Exercices_Annuel/exercices-annu
 import { ExercicesAnnuelsDetailComponent } from './Exercices_Annuel/exercices-annuels-detail/exercices-annuels-detail.component';
 import { ClientsListComponent } from './client/clients-list/clients-list.component';
 import { ClientDetailComponent } from './client/client-detail/client-detail.component';
+import { ClientEditComponent } from './client/client-edit/client-edit.component';
 
 const routes: Routes = [
   {
@@ -20,9 +21,9 @@ const routes: Routes = [
   //   title: 'toutes les factures',
   // },
   {
-     path: 'clients',
-     component: ClientsListComponent,
-     title: 'clients',
+    path: 'clients',
+    component: ClientsListComponent,
+    title: 'clients',
   },
   // {
   //   path: 'facture/:id',
@@ -30,15 +31,15 @@ const routes: Routes = [
   //   title: 'facture',
   // },
   {
-     path: 'client/:id',
-     component: ClientDetailComponent,
-     title: 'client',
+    path: 'client/:id',
+    component: ClientDetailComponent,
+    title: 'client',
   },
-  // {
-  //   path: 'editerFacture/:id',
-  //   component: FactureEditComponent,
-  //   title: 'Editer une facture',
-  // },
+  {
+    path: 'editerClient/:id',
+    component: ClientEditComponent,
+    title: 'Editer un client',
+  },
   {
     path: 'exercicesannuels',
     component: ExercicesAnnuelsListComponent,
