@@ -3,12 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .btn {
-    @apply rounded border-2 border-white p-2; 
-    transition: border-color 0.3s;           
+  @apply rounded border-2 border-white p-2;
+  transition: border-color 0.3s;
 }
 
 .table-row-hover:hover .btn {
-    @apply border-black; /* Bordure noire au survol de la ligne */
+  @apply border-black; 
 }

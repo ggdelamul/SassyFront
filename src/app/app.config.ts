@@ -14,31 +14,16 @@ const routes: Routes = [
     component: HomePageComponent,
     title: 'Accueil',
   },
-  // {
-  //   path: 'factures',
-  //   component: FactureListComponent,
-  //   title: 'toutes les factures',
-  // },
   {
-     path: 'clients',
-     component: ClientsListComponent,
-     title: 'clients',
+    path: 'clients',
+    component: ClientsListComponent,
+    title: 'clients',
   },
-  // {
-  //   path: 'facture/:id',
-  //   component: FactureDetailComponent,
-  //   title: 'facture',
-  // },
   {
-     path: 'client/:id',
-     component: ClientDetailComponent,
-     title: 'client',
+    path: 'client/:id',
+    component: ClientDetailComponent,
+    title: 'client',
   },
-  // {
-  //   path: 'editerFacture/:id',
-  //   component: FactureEditComponent,
-  //   title: 'Editer une facture',
-  // },
   {
     path: 'exercicesannuels',
     component: ExercicesAnnuelsListComponent,

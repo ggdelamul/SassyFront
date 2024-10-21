@@ -96,6 +96,56 @@
               ]
             }
           ]
+        },
+        {
+          "id": 3,
+          "mois": "Mars",
+          "listeFacture": []
+        },
+        {
+          "id": 4,
+          "mois": "Avril",
+          "listeFacture": []
+        },
+        {
+          "id": 5,
+          "mois": "Mai",
+          "listeFacture": []
+        },
+        {
+          "id": 6,
+          "mois": "Juin",
+          "listeFacture": []
+        },
+        {
+          "id": 7,
+          "mois": "Juillet",
+          "listeFacture": []
+        },
+        {
+          "id": 8,
+          "mois": "Août",
+          "listeFacture": []
+        },
+        {
+          "id": 9,
+          "mois": "Septembre",
+          "listeFacture": []
+        },
+        {
+          "id": 10,
+          "mois": "Octobre",
+          "listeFacture": []
+        },
+        {
+          "id": 11,
+          "mois": "Novembre",
+          "listeFacture": []
+        },
+        {
+          "id": 12,
+          "mois": "Décembre",
+          "listeFacture": []
         }
       ]
     },
@@ -103,6 +153,16 @@
       "id": 3,
       "designation": "2024",
       "exercicemensuels": [
+        {
+          "id": 1,
+          "mois": "Janvier",
+          "listeFacture": []
+        },
+        {
+          "id": 2,
+          "mois": "Février",
+          "listeFacture": []
+        },
         {
           "id": 3,
           "mois": "Mars",
@@ -134,6 +194,51 @@
               ]
             }
           ]
+        },
+        {
+          "id": 4,
+          "mois": "Avril",
+          "listeFacture": []
+        },
+        {
+          "id": 5,
+          "mois": "Mai",
+          "listeFacture": []
+        },
+        {
+          "id": 6,
+          "mois": "Juin",
+          "listeFacture": []
+        },
+        {
+          "id": 7,
+          "mois": "Juillet",
+          "listeFacture": []
+        },
+        {
+          "id": 8,
+          "mois": "Août",
+          "listeFacture": []
+        },
+        {
+          "id": 9,
+          "mois": "Septembre",
+          "listeFacture": []
+        },
+        {
+          "id": 10,
+          "mois": "Octobre",
+          "listeFacture": []
+        },
+        {
+          "id": 11,
+          "mois": "Novembre",
+          "listeFacture": []
+        },
+        {
+          "id": 12,
+          "mois": "Décembre",
+          "listeFacture": []
         }
       ]
     }
