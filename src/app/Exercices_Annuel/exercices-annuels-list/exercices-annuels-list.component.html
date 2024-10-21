@@ -4,7 +4,6 @@
     {
     <div class="border-2 border-slate-50 m-4 p-4 flex flex-col items-center justify-center h-48 w-72 rounded-2xl">
         <h2 class="text-lg font-semibold my-2">{{annee.designation}}</h2>
-        <p class="my-2">Nombres de mois facturés : {{annee.exercicemensuels.length}}</p>
         <p class="my-2">Chiffre d'affaires annuel : {{ annee.montantchiffreaffaireannuel }}</p>
         <button class="btn my-2" [routerLink]="['/exercicesannuels', annee.id]">Voir</button>
     </div>
