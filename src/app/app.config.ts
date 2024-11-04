@@ -7,6 +7,7 @@ import { ExercicesAnnuelsListComponent } from './Exercices_Annuel/exercices-annu
 import { ExercicesAnnuelsDetailComponent } from './Exercices_Annuel/exercices-annuels-detail/exercices-annuels-detail.component';
 import { ClientsListComponent } from './client/clients-list/clients-list.component';
 import { ClientDetailComponent } from './client/client-detail/client-detail.component';
+import { ClientEditComponent } from './client/client-edit/client-edit.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,11 @@ const routes: Routes = [
     path: 'client/:id',
     component: ClientDetailComponent,
     title: 'client',
+  },
+  {
+    path: 'editerClient/:id',
+    component: ClientEditComponent,
+    title: 'Editer un client',
   },
   {
     path: 'exercicesannuels',

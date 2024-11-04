@@ -1,0 +1,38 @@
+@if (loading()) {
+<p>Chargement des données ...</p>
+}@else {
+<p>{{client()?.id}}</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="flex flex-col gap-4">
+        <input type="text" placeholder="Nom du client" formControlName="raisonsociale" class="text-slate-800" />
+        @if(raisonsociale.hasError('required')) {
+        <div class="text-red-500">
+            Veuillez renseigner ce champ.
+        </div>
+        }
+        @if(raisonsociale.hasError('minlength'))
+        {
+        <div class="text-red-500">
+            Le nom doit contenir au moins 3 caractères.
+        </div>
+        }
+        @if(raisonsociale.hasError('maxlength'))
+        {
+        <div class="text-red-500">
+            Le nom doit contenir au maximum 100 caractères.
+        </div>
+        }
+        <input type="text" placeholder="Téléphone" formControlName="telephone" class="text-slate-800">
+        <input type="text" placeholder="Adresse" formControlName="adresse" class="text-slate-800">
+        <input type="mail" placeholder="Email" formControlName="adressemail" class="text-slate-800">
+        <select class="text-slate-800" formControlName="statut">
+            @for (status of status; track status) {
+            <option [value]="status" [selected]="status === client()?.statut">
+                {{status}}
+            </option>
+            }
+        </select>
+        <button class="btn" (click)="onSubmit()">Modifiez</button>
+    </div>
+</form>
+}
