@@ -1,5 +1,9 @@
 <p>{{client()?.raisonsociale}}</p>
 <p>{{client()?.statut}}</p>
 <button class="btn" [routerLink]="['/editerClient', client()?.id]">Editer</button>
-<button class="btn">Supprimer</button>
-<button class="btn">Retour</button>
+<button class="btn" (click)="deleteClient(client()?.id)">Supprimer</button>
+<button class="btn" [routerLink]="['/clients']">Retour</button>
+@if(deleteErrorResponse != "")
+{
+    <p>{{deleteErrorResponse}}</p>
+}
