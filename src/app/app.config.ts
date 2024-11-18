@@ -8,6 +8,7 @@ import { ExercicesAnnuelsDetailComponent } from './Exercices_Annuel/exercices-an
 import { ClientsListComponent } from './client/clients-list/clients-list.component';
 import { ClientDetailComponent } from './client/client-detail/client-detail.component';
 import { ClientEditComponent } from './client/client-edit/client-edit.component';
+import { ClientAddComponent } from './client/client-add/client-add.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,11 @@ const routes: Routes = [
     path: 'editerClient/:id',
     component: ClientEditComponent,
     title: 'Editer un client',
+  },
+  {
+    path: 'ajouter',
+    component: ClientAddComponent,
+    title: 'Ajouter un client',
   },
   {
     path: 'exercicesannuels',

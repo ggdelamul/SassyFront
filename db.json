@@ -288,6 +288,15 @@
       "telephone": "0654321987",
       "adresse": "175 avenue du petit canon 69009 Lyon",
       "statut": "prospect"
+    },
+    {
+      "raisonsociale": "ClientG",
+      "datecreation": "05 novembre 2024",
+      "mail": "clientG@client.com",
+      "telephone": "0644892377",
+      "adresse": "78 rue de la bière 69009 Lyon",
+      "statut": "prospect",
+      "id": 6
     }
   ]
 }

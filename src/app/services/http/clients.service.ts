@@ -21,4 +21,8 @@ export class clientsService {
   deleteClient(id: number | undefined): Observable<void> {
     return this.httpClient.delete<void>(`${this.API_URL}/${id}`);
   }
+
+  addClient(client: Omit<Client , 'id'>): Observable<Client> {
+    return this.httpClient.post<Client>(this.API_URL, client);
+  }
 }
